@@ -263,10 +263,10 @@ A continuación, se presentan las principales herramientas y recomendaciones org
 Ahora que hemos explorado los fundamentos teóricos de DevOps, las mejores prácticas en su desarrollo y las diversas herramientas que ofrece Google Cloud Platform, es momento de pasar a la implementación práctica.
 
 ### Despliegue automatizado con Vue.js 3, GitHub y GCP
-[▶ Ir al manual](/garden-innovacion/docs/GCP-Garden/DevOps/automate-deploy-vue3-GCP)
+[▶ Ir al manual](/docs/GCP-Garden/DevOps/automate-deploy-vue3-GCP)
 
 ### Configuración e Implementación de GitLab Runner con Terraform en Google Cloud
-[▶ Ir al manual](/garden-innovacion/docs/GCP-Garden/DevOps/setting-up-gitlab-runner)
+[▶ Ir al manual](/docs/GCP-Garden/DevOps/setting-up-gitlab-runner)
 
 ## Referencias bibliográficas
 - DORA. (2024). *DORA*. Obtenido de dora.dev: https://dora.dev/research/2024
