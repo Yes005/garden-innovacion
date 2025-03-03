@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="150 50 200 180">
+  <!-- Definición de gradientes -->
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1E4D" />
+      <stop offset="100%" stop-color="#2D3190" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="50%" stop-color="#7CB518" />
+      <stop offset="100%" stop-color="#FF5733" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Elemento base circular con efecto de circuito -->
+  <circle cx="250" cy="130" r="80" fill="url(#techGradient)" />
+  <circle cx="250" cy="130" r="76" fill="none" stroke="#3A3C6E" stroke-width="1" />
+  <circle cx="250" cy="130" r="70" fill="none" stroke="#3A3C6E" stroke-width="1" />
+  
+  <!-- Líneas de circuito -->
+  <path d="M250,50 v30 M210,90 h-30 M290,90 h30 M210,170 h-30 M290,170 h30 M250,180 v30" 
+        stroke="#3A3C6E" stroke-width="1.5" />
+  
+  <!-- Puntos de conexión -->
+  <circle cx="250" cy="80" r="4" fill="#00A3E0" />
+  <circle cx="180" cy="90" r="4" fill="#7CB518" />
+  <circle cx="320" cy="90" r="4" fill="#FF5733" />
+  <circle cx="180" cy="170" r="4" fill="#FF5733" />
+  <circle cx="320" cy="170" r="4" fill="#00A3E0" />
+  <circle cx="250" cy="180" r="4" fill="#7CB518" />
+  
+  <!-- Elementos centrales - Letras tecnológicas I+D+i -->
+  <g transform="translate(198, 105)">
+    <!-- I -->
+    <rect x="0" y="5" width="8" height="40" rx="2" fill="#FFFFFF" />
+    <!-- + -->
+    <rect x="15" y="20" width="20" height="6" rx="1" fill="#FFFFFF" />
+    <rect x="22" y="13" width="6" height="20" rx="1" fill="#FFFFFF" />
+    <!-- D -->
+    <path d="M40,5 h15 q12,0 12,20 q0,20 -12,20 h-15 z" fill="#FFFFFF" />
+    <path d="M48,13 h5 q6,0 6,12 q0,12 -6,12 h-5 z" fill="url(#techGradient)" />
+    <!-- + -->
+    <rect x="75" y="20" width="20" height="6" rx="1" fill="#FFFFFF" />
+    <rect x="82" y="13" width="6" height="20" rx="1" fill="#FFFFFF" />
+    <!-- i -->
+    <rect x="105" y="17" width="8" height="28" rx="2" fill="#FFFFFF" />
+    <circle cx="109" cy="10" r="4" fill="url(#accentGradient)" />
+  </g>
+  
+  <!-- Elementos decorativos de tecnología -->
+  <rect x="145" y="50" width="3" height="20" rx="1" fill="#00A3E0" />
+  <rect x="352" y="50" width="3" height="20" rx="1" fill="#FF5733" />
+  <rect x="145" y="190" width="3" height="20" rx="1" fill="#7CB518" />
+  <rect x="352" y="190" width="3" height="20" rx="1" fill="#00A3E0" />
+</svg>

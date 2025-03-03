@@ -8,7 +8,7 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -22,7 +22,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -30,8 +30,11 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <h3 style={{textAlign: 'center', padding: '2rem 0'}}>Manuales creados por el Equipo I+D+i en diferentes temas enfocados en la computación en la nube</h3> 
-        <div className={styles.buttons}>
+        <div>
+          <img src="./img/logo_Idi.svg" alt="Logo Manuales" style={{ width: '25%', display: 'block', margin: 'auto' }} />
+        </div>
+        <h3 style={{ textAlign: 'center', padding: '20px' }}>Manuales creados por el Equipo I+D+i en diferentes temas enfocados en la computación en la nube</h3>
+        <div className={styles.buttons} style={{ padding: '20px' }}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/category/gcp-garden">
