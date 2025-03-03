@@ -15,15 +15,15 @@ const config = {
   favicon: '/img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://garden-innovacion.vercel.app',
+  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/garden-innovacion/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Yes005', // Usually your GitHub org/user name.
-  projectName: 'garden-innovacion', // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
