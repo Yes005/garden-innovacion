@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </header>
         <div>
-          <h2 style={{ textAlign: 'center', padding: '40px' }}>Manuales creados por el Equipo I+D+i en diferentes temas enfocados en la computación en la nube</h2>
+          <h2 style={{ textAlign: 'center', padding: '40px' }}>Manuales creados por el Equipo I+D+i, en diferentes temas enfocados en la computación en la nube</h2>
           <div className={styles.buttons} style={{ paddingBottom: '25px' }}>
             <Link
               className="button button--primary button--lg"
