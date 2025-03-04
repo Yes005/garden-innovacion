@@ -86,6 +86,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
+        style: 'dark',
         title: 'GCP Garden 🌱',
         logo: {
           alt: 'Logo Manuales',

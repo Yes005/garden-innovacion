@@ -4,9 +4,20 @@ sidebar_position: 1
 
 # Playbook DevOps
 ![](./img/portada_playbook.png)
+
+:::info
+
+Playbook para aplicaciones de desarrollo en Google Cloud Platform creado por el Equipo I+D+i de la Secretaría de Innovación de la Presidencia.
+
+:::
+
+:::tip
+
 ## Descargar Playbook en formato PDF
 
-[Descargar Playbook](../../../static/docs/Playbook%20de%20DevOps%20-%20SIP.pdf)
+[🔗Descargar Playbook](../../../static/docs/Playbook%20de%20DevOps%20-%20SIP.pdf)
+
+:::
 
 ## Introducción
 En el contexto actual de transformación digital, la optimización de procesos y recursos tecnológicos constituye un imperativo estratégico para las orga-nizaciones. 

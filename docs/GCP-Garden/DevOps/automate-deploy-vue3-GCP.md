@@ -3,20 +3,29 @@ sidebar_position: 2
 ---
 
 # [Manual] Despliegue automatizado con Vue.js 3, GitHub y GCP
-## Visión general
-En esta sección, vamos a desarrollar paso a paso un ejemplo completo que demuestra cómo implementar una metodología DevOps eficiente. Utilizaremos:
+:::info
+En esta sección, vamos a desarrollar paso a paso un ejemplo completo que demuestra cómo implementar una metodología DevOps eficiente. 
+
+Utilizaremos:
 
 - Una aplicación frontend desarrollada en Vue.js 3.
 - GitHub como sistema de control de versiones.
 - Servicios de Google Cloud Platform orientados a DevOps para automatizar el despliegue.
+:::
 
->***Nota importante:** antes de comenzar, asegúrate de crear una cuenta de servicio en tu proyecto de GCP con los permisos mínimos necesarios para administrar los recursos que utilizaremos.*
+:::tip
+
+Antes de comenzar, asegúrate de crear una cuenta de servicio en tu proyecto de GCP con los permisos mínimos necesarios para administrar los recursos que utilizaremos.
+
+:::
+
 ## Preparación la aplicación y dockerización
-1. Descargar el siguiente proyecto [**Archivos.zip**](https://drive.google.com/file/d/1FbsgCc_haIZZVzgmlPq9X0uNMS8ZBgGq), al descomprimir el `.zip` se encontrará dentro los archivos de un proyecto de prueba de Vue.js 3, llamado ***“devops-test”.***
+1. Descargar el siguiente proyecto [**🔗Archivos.zip**](https://drive.google.com/file/d/1FbsgCc_haIZZVzgmlPq9X0uNMS8ZBgGq), al descomprimir el `.zip` se encontrará dentro los archivos de un proyecto de prueba de Vue.js 3, llamado ***“devops-test”.***
 1. ​Crear un repositorio en GitHub y subir a ese repositorio la app descargada.
 1. Crear un archivo en la raíz de nuestro proyecto llamado **`Dockerfile`**. 
 1. Agregar el siguiente código, que creará una imagen de nuestra aplicación y creará un servidor web con Nginx, con un archivo de configuración en la raíz de nuestro proyecto que lo expone en el puerto `8080`:
-   ```Dockerfile
+
+   ```Dockerfile title="/devops-test/Dockerfile"
    FROM node:18 AS build
 
    WORKDIR /app
@@ -54,7 +63,6 @@ En esta sección, vamos a desarrollar paso a paso un ejemplo completo que demues
    ```bash
    docker tag app-devops-image us-central1-docker.pkg.dev/$GOOGLE\_CLOUD\_PROJECT/devops-repository/app-devops-image
 
-
    docker push us-central1-docker.pkg.dev/$GOOGLE\_CLOUD\_PROJECT/devops-repository/app-devops-image
 
 ## Desplegando imagen
@@ -71,7 +79,8 @@ Crearemos 2 ambientes, uno de pruebas y uno de producción, con Cloud Build hare
 
 1. Crear archivo en la raiz del proyecto llamado `cloudbuild-staging.yaml`.
 1. Y pegar el siguiente código. `Ctrl + O` para guardar y `Ctrl + X` para salir:
-   ```yaml
+
+   ```yaml title="/devops-test/cloudbuild-staging.yaml"
    steps:
    - name: 'gcr.io/cloud-builders/docker'
       args: [
@@ -104,8 +113,9 @@ Crearemos 2 ambientes, uno de pruebas y uno de producción, con Cloud Build hare
    options:
    logging: CLOUD_LOGGING_ONLY
    ```
-3. Crear un segundo archivo en la raíz del proyecto llamado `cloudbuild-production.yaml`: 
-   ```yaml
+3. Crear un segundo archivo en la raíz del proyecto llamado `cloudbuild-production.yaml`:
+
+   ```yaml title="/devops-test/cloudbuild-production.yaml"
    steps:
    - name: 'gcr.io/cloud-builders/docker'
       args: [

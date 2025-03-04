@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # [Manual] Configuración e Implementación de GitLab Runner con Terraform en Google Cloud
-## Visión general
+:::info
 Esta guía proporciona instrucciones detalladas para configurar e implementar GitLab Runner en su repositorio, habilitando la ejecución automatizada de pipelines CI/CD. Aprenderá a crear un runner utilizando Terraform en Google Cloud, registrarlo con su proyecto de GitLab, y ejecutar su primera pipeline. La implementación se realizará en un entorno real en la nube utilizando una máquina virtual dedicada para ejecutar sus tareas de CI/CD, permitiéndole automatizar pruebas, despliegues y otras operaciones definidas en su archivo .gitlab-ci.yml. 
 
 Los pipelines son capaces de ejecutarse en entornos de:
@@ -13,10 +13,16 @@ Los pipelines son capaces de ejecutarse en entornos de:
 - Kubernetes.
 
 El propósito de esta guía es lanzar su primer pipeline haciendo uso una máquina virtual la cual se encargará de ejecutar las tareas de su repositorio.
-## Configuración y requerimientos
-### *Antes de empezar la guía*
+:::
+
+:::warning
+
 Esta actividad se realizará en un entorno en la nube real, no es una simulación o demo, por lo que, recuerda detener los servicios al finalizar las pruebas para evitar sorpresas de facturación.
-##### *Activar Cloud Shell*
+
+:::
+
+## Configuración y requerimientos
+### *Activar Cloud Shell*
 Cloud Shell es una máquina virtual configurada con herramientas de desarrollo, para esta práctica se utiliza la herramienta Terraform, esta herramienta permite administrar los recursos de Google Cloud.
 ## Requisitos previos
 ### *Clonar el repositorio*
@@ -81,7 +87,7 @@ Terraform es una herramienta de Infraestructura como Código (IaC) que permite c
       ```bash
       cd gitlab-runner
       ```
-   1. Crea un nuevo archivo, por ejemplo, **test.txt** 
+   1. Crea un nuevo archivo, por ejemplo, `test.txt` :
       ```bash
       echo "Prueba de ejecución del pipeline" > test.txt
       ```
@@ -90,7 +96,7 @@ Terraform es una herramienta de Infraestructura como Código (IaC) que permite c
       ```bash
       git add test.txt
       ```
-   1. Crea un nuevo archivo, por ejemplo, `test.txt` 
+   1. Crea un nuevo archivo, por ejemplo, `test.txt` :
       ```bash
       git commit -m "Agregando archivo de prueba para ejecutar pipeline"
       ```
@@ -101,7 +107,7 @@ Terraform es una herramienta de Infraestructura como Código (IaC) que permite c
       ```
 1. Esperar la ejecución del pipeline.
    1. Una vez que el push se haya completado, GitLab ejecutará el pipeline automáticamente. 
-   1. Ve a **GitLab > CI/CD > Pipelines** para ver el progreso.
+   1. Ve a **GitLab > CI/CD > Pipelines** para ver el progreso:
    
       ![Imagen de los pipes](./img/pipes.png)
 
