@@ -19,7 +19,8 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Manuales creados por el Equipo I+D+i, en diferentes temas enfocados en la computación en la nube.">
+      description="Manuales creados por el Equipo I+D+i, en diferentes temas enfocados en la computación en la nube."
+      logo="/img/logo_Idi.svg">
       {/* <HomepageHeader /> */}
       <main>
         <header className={clsx('hero', styles.heroBanner)} style={{ paddingBottom: 0 }}>
