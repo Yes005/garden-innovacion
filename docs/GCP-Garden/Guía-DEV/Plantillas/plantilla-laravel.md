@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# [Plantilla ] Estándares para uso de plantilla en Laravel
+# [Plantilla] Estándares para uso de plantilla en Laravel
 
 :::info
 Esta es una plantilla de estándares para desarrollo con Laravel 11.31 y PHP 8.2. Establece una arquitectura de código organizada con controladores ligeros, servicios para la lógica de negocio y repositorios opcionales para acceso a datos.
